@@ -1,3 +1,4 @@
+import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { saveAnalysis } from '../lib/api.js'

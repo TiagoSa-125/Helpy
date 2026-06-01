@@ -1,12 +1,13 @@
 import { createClient } from '@supabase/supabase-js'
+import 'dotenv/config'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseKey = process.env.SUPABASE_SERVICE_KEY
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.error('❌ Faltam VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY no frontend/.env')
+if (!supabaseUrl || !supabaseKey) {
+  console.error('❌ Faltam SUPABASE_URL e SUPABASE_SERVICE_KEY no backend/.env')
 }
 
-const supabase = createClient(supabaseUrl, supabaseAnonKey)
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 export default supabase

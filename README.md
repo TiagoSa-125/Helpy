@@ -116,4 +116,7 @@ helpy/
 
 
 
+## Como dar run nas partes certas
 
+cd /workspaces/Helpy/backend && npm run dev    isto no backend
+cd /workspaces/Helpy/frontend && npm run dev    isto no frontend
