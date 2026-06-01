@@ -21,18 +21,21 @@ cd helpy
 
 ### 2. Variáveis de ambiente
 
+
+## Pass supabase: 67PoRCa_bYou
+
+
 **backend/.env**
 ```
-SUPABASE_URL=https://xxxx.supabase.co
-SUPABASE_SERVICE_KEY=xxxx
-ANTHROPIC_API_KEY=sk-ant-xxxx
+SUPABASE_URL=https://vghrhjexnrocqugcxohp.supabase.co
+SUPABASE_SERVICE_KEY=https://vghrhjexnrocqugcxohp.supabase.co
 PORT=3001
 ```
 
 **frontend/.env**
 ```
-VITE_SUPABASE_URL=https://xxxx.supabase.co
-VITE_SUPABASE_ANON_KEY=xxxx
+VITE_SUPABASE_URL=https://vghrhjexnrocqugcxohp.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZnaHJoamV4bnJvY3F1Z2N4b2hwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAzMDAzODAsImV4cCI6MjA5NTg3NjM4MH0.ZImzFzjxY1_tizi9EIUhg0VWYNZG_iH10LJPVffzGwk
 VITE_API_URL=http://localhost:3001
 ```
 
@@ -110,3 +113,7 @@ helpy/
 - **Fase 2** — Câmara + análise IA
 - **Fase 3** — Gamificação (níveis, conquistas, ranking)
 - **Fase 4** — PWA, modo offline, polimento
+
+
+
+
