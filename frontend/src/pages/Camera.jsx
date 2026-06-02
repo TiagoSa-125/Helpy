@@ -90,8 +90,8 @@ const CONDITIONS = {
     tips: [
       'Não ignores manchas escuras ou irregulares',
       'Aplica protetor solar na zona',
-      'Marca consulta com dermatologista brevemente',
-      'Usa a regra ABCDE: Assimetria, Bordos, Cor, Diâmetro, Evolução',
+      'Marca consulta com dermatologista quando possivel',
+      'Usa a regra ABCDE: Assimetria, Bordas, Cor, Diâmetro, Evolução',
     ],
   },
   wound: {
@@ -100,10 +100,10 @@ const CONDITIONS = {
     severity: 'medium',
     points: 40,
     tips: [
-      'Aplica pressão suave com pano limpo para parar o sangramento',
+      'Aplica pressão suave com pano um limpo para parar o sangramento',
       'Desinfeta com álcool ou água oxigenada',
-      'Cobre com penso esterilizado',
-      'Feridas profundas que não param de sangrar: vai ao urgências',
+      'Mete um penso esterilizado sobre a ferida',
+      'Feridas profundas que não param de sangrar? - vai as urgências',
     ],
   },
   rash: {
@@ -115,7 +115,7 @@ const CONDITIONS = {
       'Lava a zona com água morna e sabão neutro',
       'Aplica gel de aloe vera se disponível',
       'Evita coçar — pode piorar a irritação',
-      'Se piorar em 24h, consulta um médico',
+      'Se piorar, consulta um médico',
     ],
   },
   healthy: {
@@ -127,7 +127,7 @@ const CONDITIONS = {
       'Continua a aplicar protetor solar diariamente',
       'Hidrata a pele com regularidade',
       'Bebe bastante água',
-      'Faz exames dermatológicos anuais',
+      'Faz exames dermatológicos anualmente para prevenção',
     ],
   },
 }

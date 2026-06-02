@@ -141,7 +141,7 @@ export default function Home({ user }) {
         </div>
       )}
 
-      <p style={S.disclaimer}>⚕️ Esta app é educativa. Em emergência, liga 112.</p>
+      <p style={S.disclaimer}>⚕️ Esta app é educativa. Em emergência, liga ao 112.</p>
     </div>
   )
 }

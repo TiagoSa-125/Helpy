@@ -9,15 +9,17 @@ import pointsRouter from './routes/points.js'
 const app = express()
 const PORT = process.env.PORT || 3001
 
-app.use(cors({ origin: 'http://localhost:5173' }))
+// Aceita pedidos de qualquer origem do Codespace
+app.use(cors({
+  origin: true
+}))
+
 app.use(express.json({ limit: '10mb' }))
 
-// Rotas
 app.use('/api/analyze', analyzeRouter)
 app.use('/api/users', usersRouter)
 app.use('/api/points', pointsRouter)
 
-// Rota de teste — confirma que o servidor está vivo
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Helpy backend a funcionar!' })
 })
