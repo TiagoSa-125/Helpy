@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { saveAnalysis } from '../lib/api.js'
 
@@ -11,20 +11,21 @@ export default function Result({ user }) {
   const [status, setStatus] = useState('saving') // saving | saved | error
 
   const result = state?.result
+  const savedRef = useRef(false)
 
   useEffect(() => {
     if (!result) { navigate('/'); return }
+    if (savedRef.current) return
+    savedRef.current = true
 
     async function save() {
       try {
-        // Chama o backend para guardar a missão e atualizar pontos na BD
         const res = await saveAnalysis({ result, userId: user.id })
         setPontosGanhos(res.pontosGanhos)
         setTotalPoints(res.totalPoints)
         setStatus('saved')
       } catch (err) {
         console.error('Erro ao guardar:', err)
-        // Mesmo com erro mostramos os pontos localmente
         setPontosGanhos(result.points || 0)
         setStatus('error')
       }
@@ -38,7 +39,6 @@ export default function Result({ user }) {
   const severityLabels = { low: 'Leve', medium: 'Moderado', high: 'Grave' }
   const color = severityColors[result.severity] || 'var(--accent)'
 
-  // Calcula nível a partir dos pontos totais (200 XP por nível)
   const level = totalPoints ? Math.floor(totalPoints / 200) + 1 : null
 
   return (
